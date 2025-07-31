@@ -1,0 +1,30 @@
+import pandas as pd
+import numpy as np
+import seaborn as sns 
+from sklearn.datasets import load_iris
+iris_bunch=load_iris()
+iris_pd.dataframe(iris_bunch.data,columns=iris_bunch.feature_names)
+iris['species']=iris_bunch.target
+iris['species']=iris['species'].map(dict(enumerate(iris_bunch.target_names)))
+print("shape of iris dataset:",iris.shape)
+print("\n first 5 row:")
+print(iris.head())
+print("\ndata types and non-nulls:")
+print(iris.info())
+print("\n summary statifics:")
+ptint(iris.describe())
+print("\n missing values")
+print(iris.isnull().sum())
+print("\n class  distribution")
+print(iris["species"].values_counts())
+sns,pairplot(iris,hue='species',diag_kind="kde")
+plt.suptitle("pairplot of iris features",y=1.02)
+plt.show()
+plt.figure(figsize=(8,6))
+sns.heatmap(iris.drop('species',axis=1).corr(),annot=true(map='coolwarm'))
+plt.title("featurers correlation matrix")
+plt.show()
+plt.figure(figsize=(10,6))
+sns.boxplot(data=iris.drop=iris.drop('species',axix=1))
+plt.title("boxplot for each features")
+plt.show()
